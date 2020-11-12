@@ -26,7 +26,7 @@ SECRET_KEY = '%puz2-zm6%_*y)(0i$fbkmio(1)19q8v4$0uxo%%+)6gd&zz6p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://projdecath.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['https://projdecath.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
