@@ -26,7 +26,7 @@ SECRET_KEY = '%puz2-zm6%_*y)(0i$fbkmio(1)19q8v4$0uxo%%+)6gd&zz6p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['projdecath.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # APPS
-    'API.apps.ApiConfig',
+    'API',
     # EXTERNAL LIBRARIES
     'rest_framework',
 ]
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -137,3 +138,6 @@ APPEND_SLASH=True
 API_KEY = 'ea6fba10'
 
 django_heroku.settings(locals())
+
+
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
