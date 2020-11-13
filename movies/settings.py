@@ -139,5 +139,3 @@ API_KEY = 'ea6fba10'
 
 django_heroku.settings(locals())
 
-
-STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
